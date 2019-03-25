@@ -5,7 +5,7 @@ import androidx.work.Result
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 
-class MyKotlinWorker(context: Context, params: WorkerParameters)
+class Worker(context: Context, params: WorkerParameters)
     : Worker(context, params){
 
     override fun doWork(): Result {
@@ -13,7 +13,7 @@ class MyKotlinWorker(context: Context, params: WorkerParameters)
         // Do the work here--in this case, compress the stored images.
         // In this example no parameters are passed; the task is
         // assumed to be "compress the whole library."
-        myWork()
+        startWorker()
 
         // Indicate success or failure with your return value:
         return Result.success()
@@ -23,8 +23,9 @@ class MyKotlinWorker(context: Context, params: WorkerParameters)
 
     }
 
-    fun myWork() {
-        AutomaticDataSynManager().startDateSync()
+    private fun startWorker() {
+        var workOrder = "12345"
+        AutomaticWorkerManager().doWork(workOrder)
     }
 
 }

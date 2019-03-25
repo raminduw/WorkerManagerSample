@@ -54,7 +54,7 @@ class KotlinWorkerActivity : AppCompatActivity() {
     private fun startBackgroundWork() {
         Log.d("TAG", "************ startBackgroundWork")
         val photoCheckBuilder =
-                PeriodicWorkRequestBuilder<MyKotlinWorker>(15, TimeUnit.MINUTES)
+                PeriodicWorkRequestBuilder<Worker>(15, TimeUnit.MINUTES)
         val photoCheckWork = photoCheckBuilder.build()
         WorkManager.getInstance().enqueueUniquePeriodicWork("OBC_DATA_SYNC",
                 ExistingPeriodicWorkPolicy.REPLACE, photoCheckWork)
