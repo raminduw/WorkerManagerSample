@@ -1,5 +1,5 @@
 # WorkerManagerSample
-Simple Koltin andorid application to demonstrate WorkerManager.
+This is Kotlin android program to demosntrate WorkerManager.
 
 This is simple android application(Written in Kotlin) to demonstrate WorkerManager using android Architecture components.
 https://developer.android.com/topic/libraries/architecture/workmanager
