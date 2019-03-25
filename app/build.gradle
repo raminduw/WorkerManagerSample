@@ -5,8 +5,8 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.raminduweeraman.workermanagersample"
-        minSdkVersion 21
-        targetSdkVersion 22
+        minSdkVersion 23
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.callApi.runner.AndroidJUnitRunner"
